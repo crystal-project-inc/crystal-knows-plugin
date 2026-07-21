@@ -1,13 +1,6 @@
 ---
 name: transcript-analysis
-description: >-
-  Analyze a call or meeting transcript through the lens of each participant's
-  DISC personality type. Use when the user wants to debrief a call, understand
-  why a meeting went well or poorly, review a sales/customer conversation, or
-  get personality-grounded feedback on how people communicated. The skill
-  prompts for the transcript, resolves attendees' DISC types via the Crystal
-  MCP server (multi_search / search), then explains what landed and what
-  didn't — and why — based on DISC.
+description: Analyze a call/meeting transcript by each participant's DISC type—resolve attendees' DISC via Crystal, then explain what landed, what didn't, and why. Use to debrief or review a call.
 ---
 
 # Transcript Analysis (DISC-grounded)
@@ -25,8 +18,9 @@ conversation: "here's my call transcript", "why did this meeting go badly?",
 
 ## Prerequisites
 
-This skill depends on the **Crystal MCP server** being connected (it ships with
-the `crystal-knows` plugin). It uses these tools:
+This skill depends on the **Crystal MCP tools** being available. In **claude.ai
+chat**, enable the **Crystal connector** (Settings → Connectors); in **Claude
+Code**, the `crystal-knows` plugin provides them. It uses these tools:
 
 - `multi_search` — resolve up to 25 people at once by **email or LinkedIn URL**.
   Returns per person: `disc_type`, `disc_archetype`, `traits`, `name`, `id`.
