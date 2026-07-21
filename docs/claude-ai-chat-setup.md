@@ -30,10 +30,11 @@ Once connected, Claude can look up DISC profiles by email or LinkedIn URL in any
 
 ## Step 2 — Add the Transcript skill
 
-1. Go to **Settings → Customize → Skills**.
-2. Make sure **code execution** is enabled (Skills require it).
-3. Click **+ Create skill → Upload a skill**.
-4. Upload **`transcript-analysis.zip`** (provided by Crystal).
+1. Download the skill: **[transcript-analysis.zip](https://github.com/crystal-project-inc/crystal-knows-plugin/releases/download/v0.1.0/transcript-analysis.zip)**
+2. Go to **Settings → Customize → Skills**.
+3. Make sure **code execution** is enabled (Skills require it).
+4. Click **+ Create skill → Upload a skill**.
+5. Upload the `transcript-analysis.zip` you just downloaded.
 
 The skill activates automatically when you ask Claude to analyze a call.
 
@@ -60,7 +61,7 @@ Then paste the transcript. Claude will:
 Instead of asking every member to upload the skill:
 
 1. Go to **Organization settings → Skills**.
-2. Upload **`transcript-analysis.zip`** there.
+2. Upload **[transcript-analysis.zip](https://github.com/crystal-project-inc/crystal-knows-plugin/releases/download/v0.1.0/transcript-analysis.zip)** there.
 3. It's enabled by default for all members (each can toggle it off).
 
 Members still connect the Crystal connector individually (Step 1), or you can
