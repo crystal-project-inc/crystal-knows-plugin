@@ -75,7 +75,30 @@ Never invent a DISC type. If a person can't be resolved and the user can't
 supply an identifier, analyze their contributions descriptively but label the
 DISC read as "unknown."
 
-### 4. Analyze the transcript against DISC
+### 4. Establish a citation scheme
+
+Every point in the analysis must cite the exact moment in the transcript it
+rests on. Choose the citation format by what the transcript already provides,
+in this **priority order**:
+
+1. **Timestamps** — if lines carry timestamps (e.g. `[00:03:12]`, `12:04`,
+   `(1:15)`), cite with the timestamp of the relevant line, e.g. `[00:03:12]`.
+2. **Explicit line numbers** — if the transcript is already numbered (e.g.
+   `14:` or `L14` prefixes), cite that number, e.g. `[L14]`.
+3. **Counted line numbers** — if neither is present, number the non-empty
+   content lines yourself, starting at 1 (each speaker turn / line = 1), and
+   cite those, e.g. `[L14]`. Add a one-line note in the output that line
+   numbers were auto-assigned by counting.
+
+Rules:
+- Pick **one** scheme (whichever the priority selects) and use it consistently
+  throughout.
+- Point at the specific line(s) the claim rests on; cite a short **range** when a
+  point spans turns, e.g. `[L14–15]` or `[00:03:12–00:03:40]`.
+- **Every** "what landed / what didn't" bullet carries a citation. No citation,
+  no claim.
+
+### 5. Analyze the transcript against DISC
 
 For the conversation as a whole and for key moments, connect **observed
 behavior in the transcript** to **each participant's DISC type**. Use the
@@ -90,31 +113,35 @@ Assess, per participant and for the interaction overall:
   giving an **I** energy and social connection).
 - **What fell flat, and why** — DISC mismatches (e.g. burying the ask in small
   talk with a **D**; rushing a **S**; hand-waving specifics with a **C**;
-  being cold/transactional with an **I**). Quote the transcript line that shows
-  it.
+  being cold/transactional with an **I**). Cite the transcript line (per the
+  citation scheme) that shows it.
 - **What to do differently next time** — concrete, DISC-specific adjustments.
 
-Always tie claims to **evidence**: cite the actual transcript line, then the DISC
-reason. Avoid generic advice that isn't anchored in both the transcript and a
-resolved DISC type.
+Always tie claims to **evidence**: cite the transcript (per the citation scheme),
+quote the relevant snippet, then give the DISC reason. Avoid generic advice that
+isn't anchored in both the transcript and a resolved DISC type.
 
-### 5. Output
+### 6. Output
 
-Produce a structured debrief:
+Produce a structured debrief. Prefix every evidence bullet with its citation
+(`[00:03:12]` for timestamps, `[L14]` for line numbers):
 
 ```
 ## Participants & DISC
 - <Name> — <DISC type> (<archetype>): <one-line read>
 - <Name> — unknown (couldn't resolve)
 
+_(Line numbers auto-assigned by counting — include this note only when the
+transcript had neither timestamps nor explicit line numbers.)_
+
 ## What went well
-- <transcript evidence> → <why it worked, in DISC terms>
+- `[L12]` "<quoted snippet>" → <why it worked, in DISC terms>
 
 ## What didn't land
-- <transcript evidence> → <why it missed, in DISC terms>
+- `[L18]` "<quoted snippet>" → <why it missed, in DISC terms>
 
 ## Do differently next time
-- <person/moment> → <DISC-specific adjustment>
+- `[L18]` <person/moment> → <DISC-specific adjustment>
 ```
 
 Keep it tight and evidence-led. If the user asks for a follow-up email or a
