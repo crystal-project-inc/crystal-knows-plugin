@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "crystal": {
+      "type": "http",
+      "url": "https://api.crystalknows.com/_mcp"
+    }
+  }
+}

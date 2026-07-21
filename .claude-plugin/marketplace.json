@@ -1,0 +1,26 @@
+{
+  "name": "crystal-knows-marketplace",
+  "displayName": "Crystal Knows",
+  "description": "Crystal Knows plugins for Claude Code — DISC personality intelligence for calls, emails, and meetings.",
+  "owner": {
+    "name": "Crystal Knows",
+    "email": "support@crystalknows.com"
+  },
+  "plugins": [
+    {
+      "name": "crystal-knows",
+      "displayName": "Crystal Knows",
+      "source": "./",
+      "description": "Resolve anyone's DISC profile via the Crystal MCP server and analyze meeting transcripts by each participant's personality type.",
+      "category": "productivity",
+      "keywords": [
+        "crystal",
+        "disc",
+        "personality",
+        "sales",
+        "meetings",
+        "transcript"
+      ]
+    }
+  ]
+}
