@@ -19,7 +19,7 @@ The plugin is distributed through its own marketplace (this repo).
 
 ```
 # 1. Add the marketplace
-/plugin marketplace add crystalknows/crystal-knows-plugin
+/plugin marketplace add crystal-project-inc/crystal-knows-plugin
 
 # 2. Install the plugin
 /plugin install crystal-knows@crystal-knows-marketplace

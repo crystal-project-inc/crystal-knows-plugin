@@ -8,8 +8,8 @@
     "url": "https://www.crystalknows.com"
   },
   "homepage": "https://www.crystalknows.com",
-  "repository": "https://github.com/crystalknows/crystal-knows-plugin",
-  "license": "MIT",
+  "repository": "https://github.com/crystal-project-inc/crystal-knows-plugin",
+  "license": "Apache-2.0",
   "keywords": [
     "crystal",
     "disc",
