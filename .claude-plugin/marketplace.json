@@ -11,7 +11,7 @@
       "name": "crystal-knows",
       "displayName": "Crystal Knows",
       "source": "./",
-      "description": "Resolve anyone's DISC profile via the Crystal MCP server and analyze meeting transcripts by each participant's personality type.",
+      "description": "Resolve anyone's DISC profile via the Crystal MCP server, prep for meetings, and analyze meeting transcripts by each participant's personality type.",
       "category": "productivity",
       "keywords": [
         "crystal",
@@ -19,6 +19,7 @@
         "personality",
         "sales",
         "meetings",
+        "premeeting",
         "transcript"
       ]
     }
