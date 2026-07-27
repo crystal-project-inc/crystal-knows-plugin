@@ -9,9 +9,14 @@ the [Crystal Knows](https://www.crystalknows.com) MCP server.
   (DISC / archetype / traits) by email or LinkedIn URL, plus tools for
   sales playbooks, email revision, and personality-tuned prompts. Connects to
   `https://api.crystalknows.com/_mcp` over OAuth2.
+- **`premeeting` skill** — before a call, resolve your and each attendee's DISC
+  type, pin down the goal, and get a DISC-tailored prep note (approach, pacing,
+  agenda). Uses a Google Calendar/Outlook connector to pull invite details if
+  you have one connected; otherwise just asks.
 - **`transcript-analysis` skill** — paste a call/meeting transcript and get a
   debrief of what went well and what didn't, grounded in each participant's DISC
-  type.
+  type. Pairs with `premeeting`: prep before the call, debrief against that plan
+  after.
 
 ## Install
 
@@ -29,6 +34,25 @@ Or run `/plugin`, open **Discover**, and pick **Crystal Knows**.
 
 On first use of a Crystal tool, Claude Code runs the OAuth login flow in your
 browser to authenticate you against Crystal. No API key to paste.
+
+## Using the premeeting skill
+
+Just ask, e.g. *"help me prep for my call with..."* or *"I've got a meeting with
+[name] tomorrow"*, or invoke it directly:
+
+```
+/crystal-knows:premeeting
+```
+
+The skill will:
+
+1. Check whether you have a calendar connector available (Google Calendar,
+   Outlook) and offer to pull the invite; otherwise ask who you're meeting and
+   what it's about.
+2. Ask for an email or LinkedIn URL for each attendee to resolve DISC types.
+3. Ask what outcome would make the meeting a win.
+4. Return a prep note: adaptation plan, recommended pacing/structure, a draft
+   agenda when it's warranted, a prep checklist, and DISC-specific watch-outs.
 
 ## Using the transcript skill
 
@@ -48,6 +72,9 @@ The skill will:
 4. Analyze the transcript and report what landed, what didn't, and what to do
    differently next time — each point tied to transcript evidence and DISC.
 
+If you ran `premeeting` earlier in the same chat, ask Claude to weigh the debrief
+against that plan and goal.
+
 ## Layout
 
 ```
@@ -57,6 +84,8 @@ crystal-knows-plugin/
 │   └── marketplace.json     # single-plugin marketplace catalog
 ├── .mcp.json                # Crystal remote MCP server (http + OAuth2)
 ├── skills/
+│   ├── premeeting/
+│   │   └── SKILL.md
 │   └── transcript-analysis/
 │       └── SKILL.md
 └── README.md
