@@ -49,10 +49,15 @@ The skill will:
 1. Check whether you have a calendar connector available (Google Calendar,
    Outlook) and offer to pull the invite; otherwise ask who you're meeting and
    what it's about.
-2. Ask for an email or LinkedIn URL for each attendee to resolve DISC types.
-3. Ask what outcome would make the meeting a win.
-4. Return a prep note: adaptation plan, recommended pacing/structure, a draft
-   agenda when it's warranted, a prep checklist, and DISC-specific watch-outs.
+2. Split attendees into internal teammates vs. external attendees, and for
+   external meetings, ask what the account needs (industry/size/stage).
+3. Ask for an email or LinkedIn URL for each attendee to resolve DISC types —
+   weighted toward the external, decision-making side of the room.
+4. Ask what outcome would make the meeting a win, and what kind of meeting it
+   is (demo / discovery / negotiation / relationship check-in).
+5. Return a prep note: adaptation plan, recommended pacing/structure (DISC +
+   meeting type), a draft agenda when it's warranted, a prep checklist, and
+   watch-outs.
 
 ## Using the transcript skill
 
