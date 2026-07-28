@@ -1,15 +1,16 @@
 ---
 name: premeeting
-description: Prep for an upcoming call or meeting using DISC personality intelligence and account context — resolve your and each attendee's DISC via Crystal (weighted toward external attendees), pin down the meeting type/goal, and produce a tailored prep note (approach, pacing, agenda). Use before a call; hands off to transcript-analysis afterward for a plan-vs-actual debrief.
+description: Prep for an upcoming call or meeting using DISC personality intelligence and account context — resolve your and each attendee's DISC via Crystal (weighted toward external attendees), help pick a concrete goal (tailored options, not a blank prompt) and meeting type, and produce a prep note actually curated by that goal (approach, pacing, agenda). Use before a call; hands off to transcript-analysis afterward for a plan-vs-actual debrief.
 ---
 
 # Pre-meeting Prep (DISC-grounded)
 
 Help the user walk into a call prepared: know who's in the room (DISC-wise, and
-internal vs. external), know what the account needs, know the goal, and have a
-plan/agenda shaped to how those specific people communicate and what kind of
-meeting it is. Personality data comes from the **Crystal MCP server** — never
-guess a person's DISC type; resolve it with the tools below.
+internal vs. external), know what the account needs, land on a concrete goal,
+and have a plan/agenda that's actually curated by that goal — not just DISC and
+meeting-type templates with the goal mentioned in passing. Personality data
+comes from the **Crystal MCP server** — never guess a person's DISC type;
+resolve it with the tools below.
 
 ## When to use
 
@@ -100,23 +101,50 @@ account. Skip this step entirely for purely internal meetings.
 4. Note anyone who couldn't be resolved; continue with whoever did, and flag
    unresolved people as DISC-blind rather than guessing.
 
-### 5. Get the meeting goal and type
+### 5. Tag the meeting type
 
-Ask both in one message if they aren't already clear:
+Ask if it isn't already clear:
 
-> What's the one outcome that would make this meeting a win — and what kind of
-> meeting is this (demo, discovery, negotiation, relationship check-in, or
-> something else)?
+> What kind of meeting is this — demo, discovery, negotiation, relationship
+> check-in, or something else?
 
-If the user skips the goal, proceed but keep the prep more general — say so
-rather than inventing one. If they skip the type, infer your best guess from
-context and state the assumption rather than silently picking one.
+If skipped, infer your best guess from context (a first call with a new
+prospect → discovery; a signature/pricing call → negotiation) and state the
+assumption rather than silently picking one. This feeds the goal options in
+the next step.
 
-### 6. Build the prep
+### 6. Get the meeting goal
 
-Synthesize attendee DISC types — **weighted toward the external attendees**
-identified in step 2 — the user's own DISC, the account context from step 3,
-the goal, and the meeting type into:
+A blank "what's your goal?" is a hard question to cold-start on. Instead of
+just asking, **propose 3-4 candidate goals** tailored to what you already
+know — the meeting type, the account context from step 3, and the attendees'
+DISC/roles — then let the user pick one, edit one, or write their own:
+
+> Here's what a good goal might look like for this one — pick one, tweak it, or
+> tell me your own:
+> 1. <goal tailored to this specific meeting>
+> 2. <goal tailored to this specific meeting>
+> 3. <goal tailored to this specific meeting>
+
+Use the **goal starting points** reference near the bottom of this file for the
+*shape* of each option, but write the actual options with specifics from this
+meeting (the account, the attendees, what's known so far) — don't paste the
+generic examples verbatim.
+
+If the user skips this entirely, proceed but say plainly that the agenda and
+checklist below will default to generic **<meeting-type>** best practices
+instead of being curated toward a specific outcome — step 7 depends on having a
+goal to curate against.
+
+### 7. Build the prep
+
+Before drafting anything, **derive what the goal actually requires**: write out
+2-4 concrete requirements — what has to happen, be learned, or be said in this
+room for the stated goal to be true afterward. This is the step that makes the
+goal actually curate the prep instead of sitting in the output as an unused
+label. Then synthesize attendee DISC types — **weighted toward the external
+attendees** identified in step 2 — the user's own DISC, the account context
+from step 3, and the meeting type into:
 
 - **Your adaptation plan** — how the user's natural style should flex for this
   specific room, focused on the external/decision-making side. E.g. a high-D
@@ -131,21 +159,30 @@ the goal, and the meeting type into:
   drafting one when: attendees skew **C** or **D**, the meeting is a **demo** or
   **negotiation** (both benefit from clear structure), it's high-stakes, or the
   user asked for one outright. Skip or keep it loose for **I**/**S**-heavy or
-  **relationship check-in** meetings, where a rigid agenda can feel cold.
-- **Prep checklist** — concrete things to bring or do beforehand, informed by
-  DISC (data for C, a tight opener for D, rapport context for I, reassurance
-  about pace for S) and by account context (e.g. tailor examples to their
-  industry/size, bring a case study from a similar-stage company).
-- **Watch-outs** — likely DISC mismatches and meeting-type-specific pitfalls to
-  avoid (e.g. over-demoing features irrelevant to their size/stage, or letting a
-  relationship check-in drift into an unsolicited pitch), phrased as specific
-  pitfalls for this room, not generic advice.
+  **relationship check-in** meetings, where a rigid agenda can feel cold. Every
+  agenda item should trace back to one of the goal requirements above, or exist
+  only because the meeting type/DISC structurally needs it (e.g. a few minutes
+  of rapport for an I-heavy room even if it isn't goal-critical) — don't include
+  something just because a generic template would have it.
+- **Prep checklist** — concrete things to bring or do beforehand, each tied to a
+  goal requirement, DISC (data for C, a tight opener for D, rapport context for
+  I, reassurance about pace for S), or account context (e.g. tailor examples to
+  their industry/size, bring a case study from a similar-stage company).
+- **Watch-outs** — likely DISC mismatches and meeting-type-specific pitfalls
+  that would specifically derail the stated goal (e.g. over-demoing features
+  irrelevant to their size/stage when the goal is a next-step commitment, or
+  letting a relationship check-in drift into an unsolicited pitch), phrased as
+  specific pitfalls for this room, not generic advice.
+
+If the goal was skipped in step 6, skip the requirements-derivation above and
+fall back to generic meeting-type/DISC structure — say so in the output rather
+than inventing a goal to curate against.
 
 If it's a sales context and the tools are available, you may pull in
 `generate_prompt` or `selling_to` for extra angle — treat as optional depth, not
 a required step.
 
-### 7. Output
+### 8. Output
 
 ```
 ## Meeting: <title/context> — <date/time if known>
@@ -163,7 +200,11 @@ Type: <demo / discovery / negotiation / relationship check-in / other>
 <one-line account read, or "not applicable — internal meeting">
 
 ## Goal
-<stated goal, or "not specified">
+<the chosen/written goal, or "not specified">
+
+## What this requires
+- <derived requirement>
+(omit this section entirely if the goal was skipped)
 
 ## Approach
 <the adaptation plan + pacing/structure recommendation, weighted toward the
@@ -220,3 +261,20 @@ primary letter and soften with the secondary.
 - **Relationship check-in**: keep it light — skip or loosen the agenda, lead
   with rapport, and resist turning it into a pitch unless the other side steers
   there first.
+
+## Goal starting points by meeting type
+
+Use these as a starting shape for the options offered in step 6 — adapt them
+with this meeting's actual specifics rather than presenting them as-is.
+
+- **Demo**: get a next-step commitment (trial, pilot, second call); validate
+  technical fit with a specific system/integration; expand the conversation to
+  the economic buyer.
+- **Discovery**: map their current stack/process and where it's painful;
+  qualify budget, timeline, and decision process; find and enlist a champion.
+- **Negotiation**: resolve a specific named blocker (security review, legal
+  terms, pricing); get verbal commitment before a deadline; land on final terms
+  both sides can sign.
+- **Relationship check-in**: surface anything brewing before it becomes a
+  problem; identify an expansion or referral opportunity; no ask — just
+  maintain the relationship.
