@@ -53,11 +53,13 @@ The skill will:
    external meetings, ask what the account needs (industry/size/stage).
 3. Ask for an email or LinkedIn URL for each attendee to resolve DISC types —
    weighted toward the external, decision-making side of the room.
-4. Ask what outcome would make the meeting a win, and what kind of meeting it
-   is (demo / discovery / negotiation / relationship check-in).
-5. Return a prep note: adaptation plan, recommended pacing/structure (DISC +
-   meeting type), a draft agenda when it's warranted, a prep checklist, and
-   watch-outs.
+4. Tag the meeting type (demo / discovery / negotiation / relationship
+   check-in), then propose a few tailored goal options to pick from, tweak, or
+   override with your own — rather than a blank "what's your goal?" prompt.
+5. Derive what that goal actually requires from the room, then return a prep
+   note curated around it: adaptation plan, pacing/structure (DISC + meeting
+   type), a draft agenda when it's warranted, a prep checklist, and watch-outs
+   — each tied back to the goal, not just generic DISC/meeting-type advice.
 
 ## Using the transcript skill
 
