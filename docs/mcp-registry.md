@@ -52,5 +52,5 @@ Re-publishing later (new description, URL change): bump `"version"`, commit, `mc
 
 ## Before you hit publish
 
-- `llms-full.txt` still says "not yet publicly available". Remove that line first; directory reviewers read it.
-- The server's own `search` tool description says "DISC/MBTI/Enneagram". Fix server-side so the listed tools match the site.
+- `llms-full.txt` (`data.crystalknows.com/llms-full.txt`) was flagged as saying "not yet publicly available" — re-checked 2026-08-24 and that line isn't there anymore, so this looks resolved. Worth a final glance before publish in case it was a different page.
+- The server's own `search` tool description says "DISC/MBTI/Enneagram" — this is **correct, not a bug**. `get_myself` confirms the API returns `assessments.disc` / `.mbti` / `.enneagram` independently, populated when taken. The actual gap runs the other way: `personality-mcp` (the `websiteUrl` this file points at) and `llms-full.txt` are both DISC-only in their copy and don't mention the API also carries MBTI/Enneagram. That's a marketing-copy opportunity, not a server fix — see `docs/mcp-directory-launch-plan.md`.
