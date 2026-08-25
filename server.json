@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.crystalknows/personality",
+  "title": "Crystal Personality",
+  "description": "Validated DISC profiles, selling playbooks, and email rewrites for anyone your assistant writes to.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.crystalknows.com/personality-mcp",
+  "repository": {
+    "url": "https://github.com/crystal-project-inc/crystal-knows-plugin",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.crystalknows.com/_mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "auth": "oauth2",
+      "auth_note": "OAuth with dynamic client registration; per-client connections at https://data.crystalknows.com/mcp. Clients that cannot run OAuth can use an API key embedded in the URL: https://api.crystalknows.com/_mcp/tkn/<api-key>",
+      "categories": [
+        "sales",
+        "crm",
+        "people-data",
+        "personality"
+      ],
+      "tools": [
+        "search",
+        "multi_search",
+        "fetch",
+        "selling_to",
+        "generate_prompt",
+        "revise_email",
+        "get_myself",
+        "get_upcoming_meetings",
+        "analyze_call_transcript",
+        "assign_disc_types",
+        "all_profile_tags",
+        "add_profile_tags",
+        "remove_profile_tags"
+      ],
+      "claude_code_plugin": "crystal-knows@crystal-knows-marketplace"
+    }
+  }
+}
