@@ -27,10 +27,13 @@ recipient to optimize for, or ask which one.
 
 ## Prerequisites
 
-Needs the **Crystal MCP tools** (`search`, `multi_search`, optionally
-`generate_prompt`). If none of these are available, tell the user to
-install/authenticate the `crystal-knows` plugin (or connect the Crystal
-connector in claude.ai), then stop — do not guess a DISC type out of thin air.
+This skill is built around the **Crystal MCP tools** (`search`, `multi_search`,
+and optionally `generate_prompt` / `selling_to`). If none of these are
+available, tell the user they'll get the most out of this by
+installing/authenticating the `crystal-knows` plugin (or connecting the Crystal
+connector in claude.ai). Then either wait for them to set that up, or — if they
+want to proceed anyway — do the light, non-personalized clarity/tone pass from
+step 2. Never guess a specific DISC type out of thin air to fill the gap.
 
 ## Procedure
 
